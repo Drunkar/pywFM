@@ -117,7 +117,7 @@ class FM:
         # Hence, we need to reset the repo to this specific commit pre-fix, so
         # we can use MCMC with save_model flag.
         # Can we contribute to main libFM repo so this is possible again??
-        GITHASH = '91f8504a15120ef6815d6e10cc7dee42eebaab0f'
+        GITHASH = b'91f8504a15120ef6815d6e10cc7dee42eebaab0f'
         c_githash = subprocess.check_output(['git', '--git-dir', os.path.join(self.__libfm_path, "..", ".git"), 'rev-parse', 'HEAD']).strip()
         if c_githash != GITHASH:
             raise OSError("libFM is not checked out to the correct commit."
