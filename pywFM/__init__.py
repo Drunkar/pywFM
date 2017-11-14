@@ -272,7 +272,7 @@ class FM:
             # parses rlog into
             import pandas as pd
             rlog_fd.seek(0)
-            print os.stat(rlog_fd.name).st_size
+            print(os.stat(rlog_fd.name).st_size)
             rlog = pd.read_csv(rlog_fd.name, sep='\t')
             rlog_fd.close()
         else:
